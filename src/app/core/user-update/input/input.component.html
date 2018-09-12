@@ -2,6 +2,10 @@
   <li>
     <span>通过 $event 对象取得用户输入</span>
   </li>
-  <input type="text" (keyup)="onkey($event)">
-  <p>{{values1}}</p>
+  <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">当用户按下并释放一个按键时，触发 keyup 事件，Angular 在 $event 变量提供一个相应的 DOM 事件对象，上面的代码将它作为参数传递给 onKey() 方法。</p>
+  <input type="text" class="form-control" (keyup)="onkey($event)">
+  <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">{{values1}}</p>
+  <li>
+
+  </li>
 </ol>
