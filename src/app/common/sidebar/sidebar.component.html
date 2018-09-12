@@ -1,16 +1,18 @@
 <aside class="main-sidebar">
   <section class="sidebar">
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="header">后台管理系统</li>
+      <li class="header">核心知识</li>
       <li class="treeview">
-        <a routerLink="/">
-          <i class="fa fa-dashboard"></i> <span>首页</span>
+        <a href="javascript:void(0)">
+          <i class="fa fa-dashboard"></i> <span>表单</span>
+          <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+          </span>
         </a>
-      </li>
-      <li class="treeview">
-        <a routerLink="/Products">
-          <i class="fa fa-dashboard"></i> <span>商品列表</span>
-        </a>
+        <ul class="treeview-menu">
+          <li><a routerLink="/core/userUpdate"><i class="fa fa-circle-o"></i>用户输入</a></li>
+          <li><a routerLink="/" ><i class="fa fa-circle-o"></i>模板驱动表单</a></li>
+        </ul>
       </li>
     </ul>
   </section>

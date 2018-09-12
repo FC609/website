@@ -7,13 +7,9 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { ContentComponent } from './common/content/content.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductsComponent } from './pages/products/products.component';
 import {RouterModule, Routes} from '@angular/router';
-import {ProductService} from './services/product.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { SearchPipe } from './pipe/search.pipe';
-import { StarsComponent } from './common/stars/stars.component';
-import { UpdateComponent } from './pages/update/update.component';
+import {CoreModule} from './core/core.module';
 
 
 const routes: Routes = [
@@ -22,12 +18,12 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'Products',
-    component: ProductsComponent
+    path: 'core',
+    loadChildren: './core/core.module#CoreModule'
   },
   {
-    path: 'update/:id',
-    component: UpdateComponent
+    path: '**',
+    component: HomeComponent
   }
 ]
 @NgModule({
@@ -38,20 +34,15 @@ const routes: Routes = [
     FooterComponent,
     ContentComponent,
     HomeComponent,
-    ProductsComponent,
-    SearchPipe,
-    StarsComponent,
-    UpdateComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    CoreModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [
-    ProductService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,10 @@
+<ol>
+  <li>
+    <span>绑定到用户输入事件</span>
+    <button type="button" class="btn bg-navy margin" (click)="onClickMe()">点击</button>{{clickMessage}}
+  </li>
+  <li>
+    <span>通过 $event 对象取得用户输入</span>
+    <button type="button" class="btn bg-navy margin" (click)="onClickMe2($event)">点击</button>{{clickMessage2}}
+  </li>
+</ol>
