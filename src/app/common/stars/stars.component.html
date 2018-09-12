@@ -1,0 +1,15 @@
+<p>
+
+  <i
+    *ngFor="let i of stars;let index = index"
+    class="fa fa-fw fa-star"
+    [class.fa-star-o]="index >= star"
+    (click)="handleStarNum(index+1)"
+  >
+  </i>
+  <!--<i class="fa fa-fw fa-star"></i>-->
+  <!--<i class="fa fa-fw fa-star"></i>-->
+  <!--<i class="fa fa-fw fa-star-o"></i>-->
+  <!--<i class="fa fa-fw fa-star-o"></i>-->
+  <!--<i class="fa fa-fw fa-star-o"></i>-->
+</p>
